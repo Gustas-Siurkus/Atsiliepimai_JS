@@ -125,7 +125,7 @@ app.get("/api/atsiliepimai/:id", (req, res) => {
   });
 });
 
-// prekės sukūrimas
+// atsiliepimo sukūrimas
 app.post("/api/atsiliepimai", (req, res) => {
   let vardas = req.body.vardas;
   let pastas = req.body.pastas;
