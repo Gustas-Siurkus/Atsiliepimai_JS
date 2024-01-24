@@ -4,19 +4,21 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 var mysql = require("mysql");
+var cors = require("cors")
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+app.use(cors())
 
-const port = 3000;
+const port = 3001;
 
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "atsiliepimai",
+  database: "atsiliepimaidb",
 });
 
 con.connect(function (err) {
